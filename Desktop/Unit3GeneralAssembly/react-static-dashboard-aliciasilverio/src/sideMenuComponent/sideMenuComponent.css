@@ -1,0 +1,18 @@
+#side-menu-component {
+    background-color: gray;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px
+}
+
+#side-menu-component ul {
+    list-style: none;
+    padding: 0%;
+}
+
+#side-menu-component li {
+ margin: 5px, 0px;   
+
+}

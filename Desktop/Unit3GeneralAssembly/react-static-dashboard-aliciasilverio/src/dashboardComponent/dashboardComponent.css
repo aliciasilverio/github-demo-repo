@@ -1,0 +1,11 @@
+#dashboard-component {
+    background-color: gray;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+#dashboard-component li{
+    list-style-type: none;
+}

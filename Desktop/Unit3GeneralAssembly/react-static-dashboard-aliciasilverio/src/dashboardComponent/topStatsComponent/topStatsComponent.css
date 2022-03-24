@@ -1,0 +1,33 @@
+#top-stats-component{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3vw;
+}
+
+#top-stats-component div{
+    /* border not being applied */
+    border: black; 
+}
+
+#top-stats-component li {
+    list-style-type: none;
+    
+}
+
+#top-stats-component ul {
+    padding: 0%;
+    
+}
+
+#review-component-styling {
+    margin: 20px;
+    /* come back to this. Need margin to be white */
+}
+
+#rating-component-styling{
+    margin: 20px;
+}
+
+#sentiment-component-styling {
+    margin: 20px;
+}
