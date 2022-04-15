@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ProductComponent from "./Product/productComponent";
 import NewProductComponent from "./NewProduct/newProductComponent";
-
+import { Figure } from 'react-bootstrap';
 
 const SkincareContainer = () => {
     const [requestError, setRequestError] = useState("")
@@ -75,18 +75,35 @@ const SkincareContainer = () => {
      }, [])
     return (
         <div>
-            
-            <NewProductComponent
-            newProductServerError={newProductServerError}
-            createNewProduct={createNewProduct}
-            ></NewProductComponent>
-            {products.reverse().map((product)=>{
-                return <ProductComponent
-                key={product._id}
-                product={product}
-                deleteProduct={deleteProduct}
-                updateProduct={updateProduct}
-                ></ProductComponent>
+            <Figure>
+                <Figure.Image
+                    width={171}
+                    height={180}
+                    alt="171x180"
+                    src="https://m.media-amazon.com/images/I/614MjO2mNiL._SL1500_.jpg"
+                />
+                <Figure.Caption>
+                    Watermelon Glow Sleeping Mask
+                    <br />
+                    Glow Recipe
+                    <br />
+                    $45
+                    <br />
+                    Softening, Moisturizing, Hydrating
+                    <br />
+                </Figure.Caption>
+            </Figure>
+                    <NewProductComponent
+                    newProductServerError={newProductServerError}
+                    createNewProduct={createNewProduct}
+                    ></NewProductComponent>
+                    {products.reverse().map((product)=>{
+                        return <ProductComponent
+                        key={product._id}
+                        product={product}
+                        deleteProduct={deleteProduct}
+                        updateProduct={updateProduct}
+                        ></ProductComponent>
             })}
         </div>
     )

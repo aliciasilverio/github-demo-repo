@@ -27,31 +27,6 @@ const ProductComponent = (props) => {
         props.updateProduct(props.product._id, updateProduct)
         let validSubmission = true;
 
-        if(updateProduct.benefits.length < 1){
-            setIsValidState({
-                valid: false,
-                message: "But what benefits is it?"
-            })
-            validSubmission = false;
-        }if(updateProduct.price < 1){
-            setIsValidState({
-                valid: false,
-                message: "IT'S FREE?! I don't believe you."
-            })
-            validSubmission = false;
-        }if(updateProduct.brand.length < 1){
-            setIsValidState({
-                valid: false,
-                message: "What are some skin benefits?"
-            })
-            validSubmission = false;
-        }if(updateProduct.productName.length < 1){
-            setIsValidState({
-                valid: false,
-                message: "What's the name of the Product?"
-            })
-            validSubmission = false;
-        }
         if(validSubmission){
             props.updateProduct(updateProduct)
             setUpdateProduct({

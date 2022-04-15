@@ -26,31 +26,6 @@ const NewProductComponent = (props) => {
         e.preventDefault()
         let validSubmission = true;
 
-        if(newProduct.benefits.length < 1){
-            setIsValidState({
-                valid: false,
-                message: "But what benefits is it?"
-            })
-            validSubmission = false;
-        }if(newProduct.price < 1){
-            setIsValidState({
-                valid: false,
-                message: "IT'S FREE?! I don't believe you."
-            })
-            validSubmission = false;
-        }if(newProduct.brand.length < 1){
-            setIsValidState({
-                valid: false,
-                message: "Restaurant needs a name"
-            })
-            validSubmission = false;
-        }if(newProduct.productName.length < 1){
-            setIsValidState({
-                valid: false,
-                message: "What's the name of the project?"
-            })
-            validSubmission = false;
-        }
         if(validSubmission){
             props.createNewProduct(newProduct)
             setNewProduct({
@@ -88,7 +63,7 @@ const NewProductComponent = (props) => {
                     {/* <br /> */}
                     {/* <Form.Control as="textarea" onChange={handleInputChange} type="text" placeholder="Review"rows={3} /> */}
                     <br />
-                    <Form.Control onChange={handleInputChange} className="w-50" type="file" size="sm" />
+                    <Form.Control onChange={handleInputChange} className="w-50" type="file" size="sm" name="image"/>
 
                     <Button variant="success"type="submit">Submit Product</Button>
                     <p></p>
